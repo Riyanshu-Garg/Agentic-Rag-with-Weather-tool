@@ -10,7 +10,6 @@ This system uses a multi-agent design:
 Decides the correct path based on the user query:
 - Weather-related → Weather Agent
 - Knowledge-related → RAG Agent
-- Otherwise → Default LLM response
 
 ### **📚 Retriever Agent**
 Fetches relevant documents from the internal knowledge base stored in **Qdrant**.
@@ -19,7 +18,7 @@ Fetches relevant documents from the internal knowledge base stored in **Qdrant**
 Fetches real-time weather information using the **OpenWeather API**.
 
 ### **✍️ Generator Agent**
-Generates the final user-facing answer by combining retrieved context + reasoning.
+Generates the final user-facing answer.
 
 ---
 
@@ -27,8 +26,8 @@ Generates the final user-facing answer by combining retrieved context + reasonin
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Riyanshu-Garg/Agentic-Rag-with-Weather-tool.git
+cd Agentic-Rag-with-Weather-tool
 ```
 
 ### **2. Create a Virtual Environment**
@@ -64,7 +63,7 @@ Qdrant_END_POINT = "your_qdrant_endpoint"
 
 ### **5. Run the Application**
 ```bash
-streamlit run app.py
+streamlit run src/agentic_rag/app.py
 ```
 
 ---
@@ -84,7 +83,6 @@ streamlit run app.py
 ### **3. Execution Details**
 - See workflow diagrams.
 - Inspect logs.
-- View uploaded documents.
 
 ### **4. Reset**
 Click **"Clear Chat History"** to reset all messages and logs.
@@ -107,33 +105,11 @@ Click **"Clear Chat History"** to reset all messages and logs.
 
 > Add your screenshots inside the `assets/` folder and update paths accordingly.
 
-Example:
 ```md
 ![App UI](assets/app_ui.png)
 ![Chat Flow](assets/chat_flow.png)
 ```
 
----
-
-## 🔀 Agent Workflow Diagram (Mermaid)
-
-```mermaid
-graph TD;
-    A[User Query] --> B{Router Agent};
-
-    B -->|Weather Query| C[Weather Agent];
-    B -->|Knowledge Query| D[Retriever Agent];
-    B -->|Other| G[LLM Direct Response];
-
-    C --> F[Generator Agent];
-    D --> E[Qdrant Vector Store];
-    E --> D;
-    D --> F;
-
-    F --> H[Final Answer];
-```
-
----
 
 ## 🙏 **Acknowledgements****
 - LangChain
@@ -145,5 +121,3 @@ graph TD;
 
 ---
 
-## ⭐ **Support**
-If you find this project useful, consider starring the repository!
