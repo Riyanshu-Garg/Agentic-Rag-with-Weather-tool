@@ -103,13 +103,9 @@ Click **"Clear Chat History"** to reset all messages and logs.
 
 ## 📸 Project Screenshots
 
-> Add your screenshots inside the `assets/` folder and update paths accordingly.
+> Added screenshots in `assets/` folder.
 
-```md
-![App UI](assets/app_ui.png)
-![Chat Flow](assets/chat_flow.png)
-```
-
+---
 
 ## 🙏 **Acknowledgements****
 - LangChain
