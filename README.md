@@ -37,6 +37,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ### **3. Install Dependencies**
+Make one pdf_file folder and add any pdf which will be used as the source if no data source is given
 ```bash
 pip install -r requirements.txt
 ```
