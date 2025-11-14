@@ -24,13 +24,14 @@ myvenv/
 .env
 .streamlit/secrets.toml
 
+
 # ============================================
 # Streamlit
 # ============================================
 # Logs and static cache
 .streamlit/cache/
 .streamlit/logs/
-
+src/agentic_rag/.streamlit/secrets.toml
 # ============================================
 # OS Files
 # ============================================
